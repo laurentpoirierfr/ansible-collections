@@ -1,0 +1,23 @@
+---
+# tasks file for k9s
+- name: Download k9s 
+  ansible.builtin.get_url:
+    url: "https://github.com/derailed/k9s/releases/download/v{{ k9s_version }}/k9s_Linux_amd64.tar.gz"
+    dest: "{{ k9s_tmp_file }}"
+
+- name: "Extract {{ k9s_tmp_file }} into /tmp"
+  ansible.builtin.unarchive:
+    src: "{{ k9s_tmp_file }}"
+    dest: /tmp
+
+- name: "Move k9s to {{ k9s_install_path }}"
+  command: "mv /tmp/k9s {{ k9s_install_path }}"
+
+- name: Remove /tmp/README.md
+  file: "path=/tmp/README.md state=absent"
+
+- name: Remove /tmp/LICENSE
+  file: "path=/tmp/LICENSE state=absent"
+
+- name: "Remove {{ k9s_tmp_file }}"
+  file: "path={{ k9s_tmp_file }} state=absent"  

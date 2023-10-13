@@ -5,7 +5,8 @@
   roles:
     # - role: community
     # - role: minikube
-    - role: kubectl
+    # - role: kubectl
+    - role: k9s
   vars:
     community_dir: "~/Community"
     community_bin_dir: "{{ community_dir }}/bin"

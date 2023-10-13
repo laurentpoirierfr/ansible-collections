@@ -13,7 +13,7 @@ Liste des outils installés :
 
 en cours :
 
-- k9s
+- k9s 
 - helm, helmfile
 - kustomize
 - argocd
