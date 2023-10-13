@@ -1,0 +1,8 @@
+---
+# vars file for community
+
+# Dir where tools should be installed
+community_dir: "~/Community"
+
+# Dir where tools should be installed
+community_bin_dir: "{{ community_dir }}/bin"

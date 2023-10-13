@@ -1,0 +1,4 @@
+collections:
+  # directory containing the collection
+  - source: ../homezone/desktop
+    type: dir

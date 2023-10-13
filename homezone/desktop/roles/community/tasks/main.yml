@@ -1,0 +1,13 @@
+---
+# tasks file for community
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: "{{ community_bin_dir }}"
+    state: directory
+    mode: '0755'
+
+- name: Ajout du PATH .bashrc
+  ansible.builtin.debug:
+    msg:
+    - "Vous devez ajouter dans votre .bashrc"
+    - "PATH=$PATH:{{ community_bin_dir }}"
