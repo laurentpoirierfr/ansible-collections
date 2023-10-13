@@ -3,11 +3,15 @@
   collections:
     - homezone.desktop
   roles:
-    - role: community
-    - role: minikube
+    # - role: community
+    # - role: minikube
+    - role: kubectl
   vars:
     community_dir: "~/Community"
     community_bin_dir: "{{ community_dir }}/bin"
+    
     minikube_install_dir: "{{ community_bin_dir }}"
     minikube_version: '1.31.2'   
 
+    kubectl_install_dir: "{{ community_bin_dir }}"
+    kubectl_version: "1.28.2"

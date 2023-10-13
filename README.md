@@ -9,13 +9,13 @@ Cette collection permet la d'installer un poste développeur.
 Liste des outils installés :
 
 - minikube
+- kubectl 
 
 en cours :
 
-- kubectl                        
+- k9s
 - helm, helmfile
 - kustomize
-- k9s
 - argocd
 - golang
 

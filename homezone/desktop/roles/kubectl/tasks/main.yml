@@ -1,0 +1,9 @@
+---
+# tasks file for kubectl
+# reference https://chmodcommand.com/
+- name: Download kubectl 
+  ansible.builtin.get_url:
+    url: "https://dl.k8s.io/release/v{{ kubectl_version }}/bin/linux/amd64/kubectl"
+    dest: "{{ kubectl_install_path }}"
+    mode: '0550'
+

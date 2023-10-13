@@ -1,0 +1,9 @@
+---
+# vars file for kubectl
+# Dir where kubectl should be installed
+kubectl_install_dir: '~/Community/bin'
+
+# Path where kubectl should be installed
+kubectl_install_path: '{{ minikube_install_dir }}/kubectl'
+
+kubectl_version: "1.28.2"
