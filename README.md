@@ -37,11 +37,28 @@ $ Created collection for homezone.desktop at ansible-collections/homezone-deskto
 
 ### Usage
 
-requirements.yml
+#### requirements.yml
 
 ```yaml
 collections:
   - name: https://github.com/laurentpoirierfr/ansible-collections.git
     type: git
     version: main
+```
+
+#### playbook.yml
+
+```yaml
+---
+- hosts: localhost
+  collections:
+    - homezone.desktop
+  roles:
+    - role: community
+    - role: minikube
+  vars:
+    community_dir: "~/Community"
+    community_bin_dir: "{{ community_dir }}/bin"
+    minikube_install_dir: "{{ community_bin_dir }}"
+    minikube_version: '1.31.2'   
 ```
