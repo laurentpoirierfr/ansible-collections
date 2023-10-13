@@ -37,7 +37,3 @@
     dest: '{{ minikube_install_path }}'
     mode: 'u=rwx,go=rx'
 
-- name: Install Minikube version
-  ansible.builtin.debug:
-    msg:
-    - "Minikube version : {{ minikube_version }}"
