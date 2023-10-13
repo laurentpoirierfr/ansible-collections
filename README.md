@@ -34,3 +34,14 @@ $ make ansible
 $ ./build.sh
 $ Created collection for homezone.desktop at ansible-collections/homezone-desktop-1.0.0.tar.gz
 ```
+
+### Usage
+
+requirements.yml
+
+```yaml
+collections:
+  - name: https://github.com/laurentpoirierfr/ansible-collections.git
+    type: git
+    version: main
+```
